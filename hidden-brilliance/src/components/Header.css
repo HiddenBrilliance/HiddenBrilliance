@@ -1,0 +1,13 @@
+/* Define the @font-face rule for the custom font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../resources/BlackletterShadow-6YAA.ttf') format('truetype');
+    /* Other font properties */
+}
+
+/* Use the custom font and change the text color */
+.custom-text {
+    font-family: 'CustomFont', sans-serif;
+    color: whitesmoke;
+    /* Apply the desired text color */
+}

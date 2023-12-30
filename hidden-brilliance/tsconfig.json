@@ -110,6 +110,7 @@
     // Other settings...
     "jsx": "react" // Set the JSX setting to 'react'
   }, 
+ 
   "include": [
     "src"
   ]

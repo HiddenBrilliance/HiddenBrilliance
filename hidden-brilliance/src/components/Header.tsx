@@ -1,31 +1,32 @@
 import React from 'react';
+import './Header.css'; // Import your component-specific CSS
 import { Navbar, Container, Nav, Button, Form, FormControl } from 'react-bootstrap';
-
+import hbLogo from '../resources/hbLogo.png'
 // TODO: Figure out why the import is not working
 
 // import hbLogo from '../resources/hbLogo.png'; 
 
 const Header: React.FC = () => {
   return (
-    <Navbar expand="lg" bg="body-tertiary">
+    <Navbar expand="lg" bg="black">
       <Container>
         <Navbar.Toggle aria-controls="navbarTogglerDemo02" />
+           <Navbar.Brand href="#">
+          <img 
+            src={hbLogo} // Using the image directly in the src attribute
+            width="50"
+            height="50"
+            className="d-inline-block align-top"
+            alt="Logo"
+          />
+        </Navbar.Brand> 
         <Navbar.Collapse id="navbarTogglerDemo02">
           <Nav className="me-auto mb-2 mb-lg-0">
-            <Nav.Link href="#" active>Home</Nav.Link>
+            <Nav.Link href="#" className='custom-text' active>Home</Nav.Link>
             <Nav.Link href="#">Shop</Nav.Link>
             <Nav.Link href="#">Blog</Nav.Link>
           </Nav>
 
-          {/* <Navbar.Brand href="#">
-          <img
-            src={hbLogo} // Using the image directly in the src attribute
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            alt="Logo"
-          />
-        </Navbar.Brand> */}
           
           <Form className="d-flex" role="search">
             <FormControl type="search" placeholder="Search" aria-label="Search" />
