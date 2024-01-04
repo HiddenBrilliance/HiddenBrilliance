@@ -4,3 +4,14 @@
         height: auto;
         /* Maintain aspect ratio */
 }
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    /* Or any other justify-content property that suits your spacing needs */
+}
+
+.image-container img {
+    /* You can set max-width or max-height to maintain image aspect ratio */
+    max-width: 100%;
+    height: auto;
+}

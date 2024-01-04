@@ -1,5 +1,5 @@
 import React from 'react';
-import spotifyLogo from '../resources/spotifyEmblem.png'
+import spotifyLogo from '../resources/pngegg.png'
 import appleMusicEmblem from '../resources/appleMusicEmblem.png'
 import youtubeLogo from '../resources/youtubeEmblem.png'
 import igLogo from '../resources/igEmblem.png'
@@ -26,7 +26,7 @@ const Footer: React.FC<SpotifyLinkProps> = ({ link, title }) => {
   href={link}
   title={title}
 >
-  <div aria-hidden="true"  role="presentation" className="icon icon-spotify fa-brands">
+  <div aria-hidden="true"  role="presentation" className="icon icon-spotify fa-brands image-container">
 {/* TODO: Ask why the CSS is not re-sizing image */}
   <img src={spotifyLogo} alt="Spotify Logo" className='social-medial-icons'    // Inline style added here
  />
