@@ -1,10 +1,9 @@
 import React from 'react';
-import './Header.css'; // Import your component-specific CSS
+import './Header.css'; 
 import { Navbar, Container, Nav, Button, Form, FormControl } from 'react-bootstrap';
 import hbLogo from '../resources/hbLogo.png'
 // TODO: Figure out why the import is not working
 
-// import hbLogo from '../resources/hbLogo.png'; 
 
 const Header: React.FC = () => {
   return (
@@ -13,7 +12,7 @@ const Header: React.FC = () => {
         <Navbar.Toggle aria-controls="navbarTogglerDemo02" />
            <Navbar.Brand href="#">
           <img 
-            src={hbLogo} // Using the image directly in the src attribute
+            src={hbLogo} 
             width="50"
             height="50"
             className="d-inline-block align-top"

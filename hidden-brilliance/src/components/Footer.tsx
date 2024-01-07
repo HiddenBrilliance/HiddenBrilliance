@@ -4,7 +4,7 @@ import appleMusicEmblem from '../resources/appleMusicEmblem.png'
 import youtubeLogo from '../resources/youtubeEmblem.png'
 import igLogo from '../resources/igEmblem.png'
 
-import './Footer.css'; // Import your component-specific CSS
+import './Footer.css'; 
 
 interface SpotifyLinkProps {
     link: string;
