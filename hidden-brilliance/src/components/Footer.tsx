@@ -15,7 +15,7 @@ const Footer: React.FC<SpotifyLinkProps> = ({ link, title }) => {
     return (
 
 
-<footer className="bg-dark text-light py-4 fixed-bottom">
+<footer className="bg-dark text-light py-4 fixed-bottom footer">
       <div className="container">
         <div className="row">
           <div className="col-md-6">

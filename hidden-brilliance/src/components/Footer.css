@@ -15,3 +15,15 @@
     max-width: 100%;
     height: auto;
 }
+.footer {
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 20px;
+    /* Padding inside the footer */
+    height: 60px;
+    /* Example height for a thin footer */
+    text-align: center;
+    /* Center-align text if needed */
+}
