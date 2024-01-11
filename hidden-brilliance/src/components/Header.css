@@ -6,9 +6,17 @@
     */
     /* Other font properties */
 /* Use the custom font and change the text color */
-.custom-text {
+/* .custom-text {
     font-family: 'CustomFont', sans-serif;
-    color: whitesmoke;
+    color: white;
         /* Apply the desired text color */
     
+.text-color {
+        color: white;
+    }
+
+    .nav-align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
