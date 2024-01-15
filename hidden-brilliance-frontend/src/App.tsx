@@ -9,13 +9,12 @@ import './components/Blog.css'
 
 
 import './App.css';
-
 function App() {
   return (
     <div id="root" style={{ minHeight: '100vh', position: 'relative' }}>
     {/* <div className="App"> */}
       <Header />
-      <Blog />
+      {/* <Blog /> */}
       <Footer link={'https://open.spotify.com/artist/3aY5vFyTSP6wnIkddlb7lC?si=ByE0FTJlS8OsGzFms9w4oQ'} title={'Aaron Alexander Music'} />
     </div>
   );
