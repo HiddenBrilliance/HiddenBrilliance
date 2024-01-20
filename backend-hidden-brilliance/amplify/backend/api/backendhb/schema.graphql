@@ -1,18 +1,17 @@
-type Blog @model {
+type Blog @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   name: String!
   posts: [Post] @hasMany
 }
 
-type Post @model {
+type Post @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   title: String!
   blog: Blog @belongsTo
   comments: [Comment] @hasMany
-  filePath: String
 }
 
-type Comment @model {
+type Comment @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   post: Post @belongsTo
   content: String!

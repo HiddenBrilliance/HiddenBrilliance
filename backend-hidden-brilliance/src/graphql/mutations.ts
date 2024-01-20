@@ -19,9 +19,9 @@ export const createBlog = /* GraphQL */ `mutation CreateBlog(
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -40,9 +40,9 @@ export const updateBlog = /* GraphQL */ `mutation UpdateBlog(
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -61,9 +61,9 @@ export const deleteBlog = /* GraphQL */ `mutation DeleteBlog(
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -81,9 +81,9 @@ export const createPost = /* GraphQL */ `mutation CreatePost(
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -93,6 +93,7 @@ export const createPost = /* GraphQL */ `mutation CreatePost(
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -110,9 +111,9 @@ export const updatePost = /* GraphQL */ `mutation UpdatePost(
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -122,6 +123,7 @@ export const updatePost = /* GraphQL */ `mutation UpdatePost(
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -139,9 +141,9 @@ export const deletePost = /* GraphQL */ `mutation DeletePost(
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -151,6 +153,7 @@ export const deletePost = /* GraphQL */ `mutation DeletePost(
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -170,12 +173,14 @@ export const createComment = /* GraphQL */ `mutation CreateComment(
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }
@@ -195,12 +200,14 @@ export const updateComment = /* GraphQL */ `mutation UpdateComment(
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }
@@ -220,12 +227,14 @@ export const deleteComment = /* GraphQL */ `mutation DeleteComment(
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }

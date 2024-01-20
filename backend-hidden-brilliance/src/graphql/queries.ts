@@ -16,9 +16,9 @@ export const getBlog = /* GraphQL */ `query GetBlog($id: ID!) {
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -32,9 +32,9 @@ export const listBlogs = /* GraphQL */ `query ListBlogs(
     items {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     nextToken
@@ -49,9 +49,9 @@ export const getPost = /* GraphQL */ `query GetPost($id: ID!) {
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -61,6 +61,7 @@ export const getPost = /* GraphQL */ `query GetPost($id: ID!) {
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -77,6 +78,7 @@ export const listPosts = /* GraphQL */ `query ListPosts(
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     nextToken
@@ -93,12 +95,14 @@ export const getComment = /* GraphQL */ `query GetComment($id: ID!) {
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }
@@ -118,6 +122,7 @@ export const listComments = /* GraphQL */ `query ListComments(
       createdAt
       updatedAt
       postCommentsId
+      owner
       __typename
     }
     nextToken

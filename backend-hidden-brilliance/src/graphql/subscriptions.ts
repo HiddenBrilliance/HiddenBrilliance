@@ -8,17 +8,20 @@ type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionOutput: OutputType;
 };
 
-export const onCreateBlog = /* GraphQL */ `subscription OnCreateBlog($filter: ModelSubscriptionBlogFilterInput) {
-  onCreateBlog(filter: $filter) {
+export const onCreateBlog = /* GraphQL */ `subscription OnCreateBlog(
+  $filter: ModelSubscriptionBlogFilterInput
+  $owner: String
+) {
+  onCreateBlog(filter: $filter, owner: $owner) {
     id
     name
     posts {
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -26,17 +29,20 @@ export const onCreateBlog = /* GraphQL */ `subscription OnCreateBlog($filter: Mo
   APITypes.OnCreateBlogSubscriptionVariables,
   APITypes.OnCreateBlogSubscription
 >;
-export const onUpdateBlog = /* GraphQL */ `subscription OnUpdateBlog($filter: ModelSubscriptionBlogFilterInput) {
-  onUpdateBlog(filter: $filter) {
+export const onUpdateBlog = /* GraphQL */ `subscription OnUpdateBlog(
+  $filter: ModelSubscriptionBlogFilterInput
+  $owner: String
+) {
+  onUpdateBlog(filter: $filter, owner: $owner) {
     id
     name
     posts {
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -44,17 +50,20 @@ export const onUpdateBlog = /* GraphQL */ `subscription OnUpdateBlog($filter: Mo
   APITypes.OnUpdateBlogSubscriptionVariables,
   APITypes.OnUpdateBlogSubscription
 >;
-export const onDeleteBlog = /* GraphQL */ `subscription OnDeleteBlog($filter: ModelSubscriptionBlogFilterInput) {
-  onDeleteBlog(filter: $filter) {
+export const onDeleteBlog = /* GraphQL */ `subscription OnDeleteBlog(
+  $filter: ModelSubscriptionBlogFilterInput
+  $owner: String
+) {
+  onDeleteBlog(filter: $filter, owner: $owner) {
     id
     name
     posts {
       nextToken
       __typename
     }
-    imgUrl
     createdAt
     updatedAt
+    owner
     __typename
   }
 }
@@ -62,16 +71,19 @@ export const onDeleteBlog = /* GraphQL */ `subscription OnDeleteBlog($filter: Mo
   APITypes.OnDeleteBlogSubscriptionVariables,
   APITypes.OnDeleteBlogSubscription
 >;
-export const onCreatePost = /* GraphQL */ `subscription OnCreatePost($filter: ModelSubscriptionPostFilterInput) {
-  onCreatePost(filter: $filter) {
+export const onCreatePost = /* GraphQL */ `subscription OnCreatePost(
+  $filter: ModelSubscriptionPostFilterInput
+  $owner: String
+) {
+  onCreatePost(filter: $filter, owner: $owner) {
     id
     title
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -81,6 +93,7 @@ export const onCreatePost = /* GraphQL */ `subscription OnCreatePost($filter: Mo
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -88,16 +101,19 @@ export const onCreatePost = /* GraphQL */ `subscription OnCreatePost($filter: Mo
   APITypes.OnCreatePostSubscriptionVariables,
   APITypes.OnCreatePostSubscription
 >;
-export const onUpdatePost = /* GraphQL */ `subscription OnUpdatePost($filter: ModelSubscriptionPostFilterInput) {
-  onUpdatePost(filter: $filter) {
+export const onUpdatePost = /* GraphQL */ `subscription OnUpdatePost(
+  $filter: ModelSubscriptionPostFilterInput
+  $owner: String
+) {
+  onUpdatePost(filter: $filter, owner: $owner) {
     id
     title
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -107,6 +123,7 @@ export const onUpdatePost = /* GraphQL */ `subscription OnUpdatePost($filter: Mo
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -114,16 +131,19 @@ export const onUpdatePost = /* GraphQL */ `subscription OnUpdatePost($filter: Mo
   APITypes.OnUpdatePostSubscriptionVariables,
   APITypes.OnUpdatePostSubscription
 >;
-export const onDeletePost = /* GraphQL */ `subscription OnDeletePost($filter: ModelSubscriptionPostFilterInput) {
-  onDeletePost(filter: $filter) {
+export const onDeletePost = /* GraphQL */ `subscription OnDeletePost(
+  $filter: ModelSubscriptionPostFilterInput
+  $owner: String
+) {
+  onDeletePost(filter: $filter, owner: $owner) {
     id
     title
     blog {
       id
       name
-      imgUrl
       createdAt
       updatedAt
+      owner
       __typename
     }
     comments {
@@ -133,6 +153,7 @@ export const onDeletePost = /* GraphQL */ `subscription OnDeletePost($filter: Mo
     createdAt
     updatedAt
     blogPostsId
+    owner
     __typename
   }
 }
@@ -140,8 +161,11 @@ export const onDeletePost = /* GraphQL */ `subscription OnDeletePost($filter: Mo
   APITypes.OnDeletePostSubscriptionVariables,
   APITypes.OnDeletePostSubscription
 >;
-export const onCreateComment = /* GraphQL */ `subscription OnCreateComment($filter: ModelSubscriptionCommentFilterInput) {
-  onCreateComment(filter: $filter) {
+export const onCreateComment = /* GraphQL */ `subscription OnCreateComment(
+  $filter: ModelSubscriptionCommentFilterInput
+  $owner: String
+) {
+  onCreateComment(filter: $filter, owner: $owner) {
     id
     post {
       id
@@ -149,12 +173,14 @@ export const onCreateComment = /* GraphQL */ `subscription OnCreateComment($filt
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }
@@ -162,8 +188,11 @@ export const onCreateComment = /* GraphQL */ `subscription OnCreateComment($filt
   APITypes.OnCreateCommentSubscriptionVariables,
   APITypes.OnCreateCommentSubscription
 >;
-export const onUpdateComment = /* GraphQL */ `subscription OnUpdateComment($filter: ModelSubscriptionCommentFilterInput) {
-  onUpdateComment(filter: $filter) {
+export const onUpdateComment = /* GraphQL */ `subscription OnUpdateComment(
+  $filter: ModelSubscriptionCommentFilterInput
+  $owner: String
+) {
+  onUpdateComment(filter: $filter, owner: $owner) {
     id
     post {
       id
@@ -171,12 +200,14 @@ export const onUpdateComment = /* GraphQL */ `subscription OnUpdateComment($filt
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }
@@ -184,8 +215,11 @@ export const onUpdateComment = /* GraphQL */ `subscription OnUpdateComment($filt
   APITypes.OnUpdateCommentSubscriptionVariables,
   APITypes.OnUpdateCommentSubscription
 >;
-export const onDeleteComment = /* GraphQL */ `subscription OnDeleteComment($filter: ModelSubscriptionCommentFilterInput) {
-  onDeleteComment(filter: $filter) {
+export const onDeleteComment = /* GraphQL */ `subscription OnDeleteComment(
+  $filter: ModelSubscriptionCommentFilterInput
+  $owner: String
+) {
+  onDeleteComment(filter: $filter, owner: $owner) {
     id
     post {
       id
@@ -193,12 +227,14 @@ export const onDeleteComment = /* GraphQL */ `subscription OnDeleteComment($filt
       createdAt
       updatedAt
       blogPostsId
+      owner
       __typename
     }
     content
     createdAt
     updatedAt
     postCommentsId
+    owner
     __typename
   }
 }

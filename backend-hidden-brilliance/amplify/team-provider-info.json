@@ -14,6 +14,9 @@
     "categories": {
       "api": {
         "backendhb": {}
+      },
+      "auth": {
+        "backendhb9da13f7b": {}
       }
     }
   }
