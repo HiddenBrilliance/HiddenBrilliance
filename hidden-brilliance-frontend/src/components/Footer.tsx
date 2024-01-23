@@ -12,35 +12,49 @@ interface SpotifyLinkProps {
   }
 
 const Footer: React.FC<SpotifyLinkProps> = ({ link, title }) => {
-    return (
-
-
-<footer className="bg-dark text-light py-4 fixed-bottom footer">
+  return (
+    <footer className="bg-dark text-light py-4 fixed-bottom footer">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
             <a
-  className="site-nav__link js-no-transition"
-  target="_blank"
-  rel="noopener"
-  href={link}
-  title={title}
->
-  <div aria-hidden="true"  role="presentation" className="icon icon-spotify fa-brands image-container">
-{/* TODO: Ask why the CSS is not re-sizing image */}
-  <img src={spotifyLogo} alt="Spotify Logo" className='social-medial-icons'    // Inline style added here
- />
-  <img src={appleMusicEmblem} alt="Apple Music Logo" className='social-medial-icons' />
-  <img src={youtubeLogo} alt="YouTube Music Logo" className='social-medial-icons' />
-  <img src={igLogo} alt="Instagram Logo" className='social-medial-icons' />
-
-
-  </div>
-  <span className="icon__fallback-text">Spotify</span>
-</a>
+              className="site-nav__link js-no-transition"
+              target="_blank"
+              rel="noopener"
+              href={link}
+              title={title}
+            >
+              <div
+                aria-hidden="true"
+                role="presentation"
+                className="icon icon-spotify fa-brands image-container"
+              >
+                {/* TODO: Ask why the CSS is not re-sizing image */}
+                <img
+                  src={spotifyLogo}
+                  alt="Spotify Logo"
+                  className="social-medial-icons" // Inline style added here
+                />
+                <img
+                  src={appleMusicEmblem}
+                  alt="Apple Music Logo"
+                  className="social-medial-icons"
+                />
+                <img
+                  src={youtubeLogo}
+                  alt="YouTube Music Logo"
+                  className="social-medial-icons"
+                />
+                <img
+                  src={igLogo}
+                  alt="Instagram Logo"
+                  className="social-medial-icons"
+                />
+              </div>
+              <span className="icon__fallback-text">Spotify</span>
+            </a>
           </div>
-          <div className="col-md-6">
-          </div>
+          <div className="col-md-6"></div>
         </div>
         <div className="row">
           <div className="col-12 text-center">
@@ -49,19 +63,8 @@ const Footer: React.FC<SpotifyLinkProps> = ({ link, title }) => {
         </div>
       </div>
     </footer>
-
-
-
-
-
-
-
-
-
-        
-
-    )
-  };
+  );
+};
 
   export default Footer;
 
